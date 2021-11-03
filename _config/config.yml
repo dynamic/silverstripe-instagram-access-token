@@ -1,0 +1,6 @@
+---
+Name: instagram-token-refresh
+---
+Silverstripe\SiteConfig\SiteConfig:
+  extensions:
+    - Dynamic\InstagramToken\ORM\SiteConfigExtension
