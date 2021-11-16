@@ -31,7 +31,7 @@ class TokenRefreshTask extends BuildTask
 
         $response = $client->get('refresh_access_token', [
             'query' => [
-                'grant_type=ig_refresh_token',
+                'grant_type' => 'ig_refresh_token',
                 'access_token' => $currentToken,
             ]
         ]);

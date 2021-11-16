@@ -2,6 +2,8 @@
 
 namespace Dynamic\InstagramToken\ORM;
 
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\SiteConfig\SiteConfig;
 
@@ -19,5 +21,12 @@ class SiteConfigExtension extends DataExtension
         'InstagramAccessToken' => 'Varchar',
     ];
 
+    public function updateCMSFields(FieldList $fields)
+    {
+        $fields->addFieldsToTab('Root.Integrations', [
+            TextField::create('InstagramAccessToken'),
+        ]);
+        parent::updateCMSFields($fields);
+    }
 
 }

@@ -4,3 +4,7 @@ Name: instagram-token-refresh
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
     - Dynamic\InstagramToken\ORM\SiteConfigExtension
+
+SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - Dynamic\InstagramToken\ORM\SiteTreeExtension
